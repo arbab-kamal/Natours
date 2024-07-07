@@ -23,7 +23,7 @@ exports.signup = catchAsync(async (req, res, next) => {
         role: req.body.role
     });
     const url = `${req.protocol}://${req.get('host')}/me`;
-    console.log(url)
+
     await new Email(newUser, url).sendWelcome()
     const token = signToken(newUser._id);
     const cookieOptions = {

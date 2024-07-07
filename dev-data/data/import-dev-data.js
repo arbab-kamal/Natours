@@ -42,7 +42,7 @@ const deleteData = async () => {
         await Review.deleteMany();
         await Tour.deleteMany();
         await User.deleteMany();
-        console.log('Data successful Delete');
+
         process.exit();
     } catch (err) {
         console.log(err);

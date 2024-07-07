@@ -13,6 +13,7 @@ const userRouter = require('./Route/user')
 const reviewRouter = require('./Route/review')
 const viewRouter = require('./Route/viewRoute')
 const cookieParser = require('cookie-Parser')
+const compression = require('compression')
 const bookingRouter = require('./Route/bookingRoute')
 const app = express();
 
@@ -63,14 +64,14 @@ app.use(HPP({
 // Test middleware
 app.use((req, res, next) => {
   // req.requestTime = new Date().toISOString();
-  //  console.log(req.headers);
+
   next();
 });
 
 
 
 
-
+app.use(compression())
 ///Route
 
 app.use('/', viewRouter);
