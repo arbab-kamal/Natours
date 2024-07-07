@@ -86,5 +86,4 @@ app.all('*', (req, res, next) => {
 });
 
 app.use(globalErrorHandler);
-const port = 3000
 module.exports = app;
