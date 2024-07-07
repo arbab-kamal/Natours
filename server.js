@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const port = process.env.PORT || 3000;
 process.on('uncaughtException', err => {
     console.log('UNCAUGHT EXCEPTION! Shutting Down...')
     console.log(err.name, err.message);
@@ -13,7 +14,7 @@ const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSW
 mongoose.connect(DB).then(() => console.log('Connected to database'));
 
 
-const port = 3000 || process.env.PORT;
+
 
 const server = app.listen(port, () => {
     console.log(`app running on port ${port}...`);
