@@ -42,9 +42,6 @@
     "xss-clean": "^0.1.4"
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.12.1",
-    "core-js": "^3.37.1",
-    "nodemon": "^3.1.2",
-    "regenerator-runtime": "^0.14.1"
+    "nodemon": "^3.1.2"
   }
 }

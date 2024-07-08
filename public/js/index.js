@@ -1,6 +1,3 @@
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
-import '@babel/polyfill'
 import { displayMap } from './leaflet';
 import { login, logout } from "./login.js";
 import { signup } from './signup';
