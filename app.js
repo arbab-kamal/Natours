@@ -1,4 +1,5 @@
 const path = require('path');
+const dotenv = require('dotenv');
 const express = require('express');
 const morgan = require('morgan');
 const AppError = require('./utlis/appError');
@@ -60,11 +61,7 @@ app.use(HPP({
 }))
 
 // Test middleware
-app.use((req, res, next) => {
-  // req.requestTime = new Date().toISOString();
 
-  next();
-});
 
 
 
@@ -82,6 +79,7 @@ app.use('/api/v1/bookings', bookingRouter)
 app.all('*', (req, res, next) => {
   next(new AppError(`Cant find ${req.originalUrl} on this server!`, 404));
 });
+
 
 app.use(globalErrorHandler);
 module.exports = app;

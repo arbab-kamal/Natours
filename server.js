@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const Port = require('./app')
-process.on('uncaughtException', err => {
+process.on('uncaughtException', err => { 
     console.log('UNCAUGHT EXCEPTION! Shutting Down...')
     console.log(err.name, err.message);
     process.exit(1);
