@@ -17,6 +17,7 @@ const compression = require('compression')
 const bookingRouter = require('./Route/bookingRoute')
 const app = express();
 const cors = require('cors')
+//const bookingController = require('./Controller/bookingController')
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'))
 
@@ -49,6 +50,8 @@ app.use('/api', limiter);
 
 app.use(cors());
 app.options('*', cors())
+
+//app.post('/webhook-checkout', express.raw({ type: application / json }), bookingController.webhookCheckOut)
 // Body parser,reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }))
