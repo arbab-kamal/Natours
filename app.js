@@ -16,7 +16,7 @@ const cookieParser = require('cookie-parser')
 const compression = require('compression')
 const bookingRouter = require('./Route/bookingRoute')
 const app = express();
-
+const cors = require('cors')
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'))
 
