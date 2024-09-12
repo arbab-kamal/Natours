@@ -1425,3 +1425,73 @@ body {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+/* Media query for 1100px */
+@media only screen and (max-width: 1100px) {
+  /* Your CSS rules for screens up to 1100px */
+  .header {
+    flex-direction: column;
+  }
+
+  .header__logo {
+    order: -1;
+    margin-bottom: 1.5rem;
+  }
+
+  .nav--tours {
+    margin-bottom: 1.5rem;
+  }
+
+  .nav__el:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1.2rem;
+  }
+
+  .nav__search {
+    order: -1;
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Media query for 900px */
+@media only screen and (max-width: 900px) {
+  /* Your CSS rules for screens up to 900px */
+  .container {
+    max-width: 90rem;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media query for 500px */
+@media only screen and (max-width: 500px) {
+  /* Your CSS rules for screens up to 500px */
+  .header {
+    padding: 0 3rem;
+  }
+
+  .main {
+    padding: 4rem 3rem;
+  }
+
+  .section-description {
+    padding: 0 3rem;
+  }
+
+  .section-reviews {
+    padding: 3rem 0;
+  }
+
+  .cta {
+    padding: 6rem 3rem;
+  }
+
+  .user-view__form-container {
+    padding: 0 3rem;
+  }
+
+  .footer {
+    padding: 4rem 2rem 3rem 2rem;
+  }
+}
