@@ -1495,3 +1495,14 @@ body {
     padding: 4rem 2rem 3rem 2rem;
   }
 }
+@media only screen and (max-width: 400px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* Add any other specific styling adjustments for smaller screens */
+}
